@@ -1,0 +1,2 @@
+rootProject.name = "AndersenHW5_Fragments"
+include ':app'
