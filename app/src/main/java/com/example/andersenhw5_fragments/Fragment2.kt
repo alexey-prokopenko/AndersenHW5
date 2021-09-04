@@ -1,10 +1,10 @@
 package com.example.andersenhw5_fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
 import com.example.andersenhw5_fragments.ListContact.contactlist
@@ -13,9 +13,9 @@ import com.example.andersenhw5_fragments.databinding.Fragment2Binding
 
 @Suppress("UNREACHABLE_CODE")
 class Fragment2 : Fragment() {
-private lateinit var binding: Fragment2Binding
-private val data : ModelData by activityViewModels()
-private var newId : Int = 0
+    private lateinit var binding: Fragment2Binding
+    private val data: ModelData by activityViewModels()
+    private var newId: Int = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +31,7 @@ private var newId : Int = 0
 
     private fun putIdEt() {
 
-        data.putId.observe(activity as  LifecycleOwner,{
+        data.putId.observe(activity as LifecycleOwner, {
             newId = it
         })
         with(binding) {
@@ -41,7 +41,7 @@ private var newId : Int = 0
         }
     }
 
-    private fun saveChanges () {
+    private fun saveChanges() {
         with(binding) {
             btSave.setOnClickListener {
                 contactlist[newId].name = edName.text.toString()

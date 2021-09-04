@@ -1,10 +1,10 @@
 package com.example.andersenhw5_fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.andersenhw5_fragments.ListContact.contactlist
 import com.example.andersenhw5_fragments.databinding.Fragment1Binding
@@ -12,8 +12,8 @@ import com.example.andersenhw5_fragments.databinding.Fragment1Binding
 
 class Fragment1 : Fragment() {
 
-private lateinit var binding: Fragment1Binding
-private val data: ModelData by activityViewModels()
+    private lateinit var binding: Fragment1Binding
+    private val data: ModelData by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,7 +34,8 @@ private val data: ModelData by activityViewModels()
         }
 
     }
-    private fun openFragment () {
+
+    private fun openFragment() {
         val screenMode = context?.resources?.configuration?.smallestScreenWidthDp
         if (screenMode!! >= 600) {
             activity?.supportFragmentManager
@@ -51,29 +52,29 @@ private val data: ModelData by activityViewModels()
         }
     }
 
-    private fun pushToFragment () {
+    private fun pushToFragment() {
         binding.apply {
-            contact1.setOnClickListener{
+            contact1.setOnClickListener {
                 data.putId.value = 0
                 openFragment()
             }
-            contact2.setOnClickListener{
+            contact2.setOnClickListener {
                 data.putId.value = 1
                 openFragment()
             }
-            contact3.setOnClickListener{
+            contact3.setOnClickListener {
                 data.putId.value = 2
                 openFragment()
             }
-            contact4.setOnClickListener{
+            contact4.setOnClickListener {
                 data.putId.value = 3
                 openFragment()
             }
-            contact5.setOnClickListener{
+            contact5.setOnClickListener {
                 data.putId.value = 4
                 openFragment()
             }
-            }
+        }
     }
 
 
